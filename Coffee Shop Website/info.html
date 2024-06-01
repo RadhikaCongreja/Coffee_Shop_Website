@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Info</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      integrity="sha384-ZenhVNpHmPQ0oW9R76gXEbHgvzL0OpIDYvZMrY8FxjGMeLCEhJAFzwEoEoIh / EJtKkOm+kXhPEaIl chartZZ+xjD / gXhVH +/- V / hPg / 20=Ejq6LGFQ / jYWvOaQW3 / a / HIIxn / a / hvhEXwboLaroum / qzL / IvzL / 4YWI="
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        text-align: center;
+        /* background-color: #b2744c; */
+        background-image: linear-gradient(
+          to right,
+          #ff9933,
+          #b2744c,
+          rgb(242, 157, 171)
+        );
+        color: whitesmoke;
+        font-size: larger;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-3">
+      <h1>Contact Information</h1>
+      <ul>
+        <li id="info-name"></li>
+        <li id="info-email"></li>
+        <li id="info-number"></li>
+        <li id="info-message"></li>
+      </ul>
+    </div>
+
+    <script>
+      // Get the URL query string parameters
+      const urlParams = new URLSearchParams(window.location.search);
+
+      // Get the form data from the query string
+      const name = urlParams.get("name");
+      const email = urlParams.get("email");
+      const number = urlParams.get("number");
+      const message = urlParams.get("message"); // Access message parameter
+
+      // Display the data in the corresponding elements
+      document.getElementById("info-name").textContent = name;
+      document.getElementById("info-email").textContent = email;
+      document.getElementById("info-number").textContent = number;
+      document.getElementById("info-message").textContent = message; // Display message
+    </script>
+  </body>
+</html>
